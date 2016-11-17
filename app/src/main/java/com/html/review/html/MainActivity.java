@@ -15,14 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//      this.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
-
         setContentView(R.layout.activity_main);
 
-
-
-        //实例化WebView对象
         webview = (WebView) findViewById(R.id.wb);
         //设置WebView属性，能够执行Javascript脚本
         webview.getSettings().setJavaScriptEnabled(true);
